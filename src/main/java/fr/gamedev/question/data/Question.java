@@ -10,7 +10,6 @@ import javax.persistence.Id;
  */
 @Entity
 public class Question {
-	
 	@GeneratedValue
 	@Id
 	private long id;

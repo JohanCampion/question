@@ -17,7 +17,5 @@ import fr.gamedev.question.data.User;
  */
 @RepositoryRestResource(collectionResourceRel = "user", path = "user")
 public interface UserRepository extends PagingAndSortingRepository<User, Long> {
-	
 	List<User> findByLastName(@Param("name") String name);
-
 }
