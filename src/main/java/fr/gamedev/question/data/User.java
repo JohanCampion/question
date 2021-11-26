@@ -11,10 +11,19 @@ import javax.persistence.Id;
 @Entity
 public class User {
 
+	/**@param
+	 *Identifiant, autogénéré
+	 */
 	@GeneratedValue
 	@Id
 	private long id;
+	/**@param
+	 *Nom d'utilisateur (pour la connection par exemple)
+	 */
 	private String login;
+	/**@param
+	 *Nom de famille (pour l'affichage)
+	 */
 	private String lastName;
 
 	/**

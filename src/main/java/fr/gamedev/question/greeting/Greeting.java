@@ -5,19 +5,25 @@ package fr.gamedev.question.greeting;
  *
  */
 public class Greeting {
-	private final long id;
-	private final String content;
+/**@param
+*Identifiant
+ */
+private final long id;
+/**@param
+ * Contenu de la salutation
+ */
+private final String content;
 
-	public Greeting(final long id, final String content) {
-		this.id = id;
-		this.content = content;
-	}
+public Greeting(final long id, final String content) {
+	this.id = id;
+	this.content = content;
+}
 
-	public long getId() {
-		return id;
-	}
+public long getId() {
+	return id;
+}
 
-	public String getContent() {
-		return content;
-	}
+public String getContent() {
+	return content;
+}
 }

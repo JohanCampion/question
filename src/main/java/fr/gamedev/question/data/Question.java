@@ -10,9 +10,15 @@ import javax.persistence.Id;
  */
 @Entity
 public class Question {
+	/**@param
+	 * Identifiant, autogénéré
+	 */
 	@GeneratedValue
 	@Id
 	private long id;
+	/**@param
+	 * Contenu de la question
+	 */
 	private String content;
 	/**
 	 * @return the id

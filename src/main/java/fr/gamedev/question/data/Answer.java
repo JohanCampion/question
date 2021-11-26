@@ -11,11 +11,21 @@ import javax.persistence.OneToOne;
  */
 @Entity
 public class Answer {
+
+	/**@param
+	 *Identifiant, autogénéré
+	 */
 	@GeneratedValue
 	@Id
 	private long id;
+	/**@param
+	 * Question liée à la réponse
+	 */
 	@OneToOne
 	private Question question;
+	/**@param
+	 * Boolean : la réponse est-elle correcte ?
+	 */
 	private Boolean correctAnswer;
 	/**
 	 * @return the id
@@ -53,5 +63,5 @@ public class Answer {
 	public void setCorrectAnswer(Boolean correctAnswer) {
 		this.correctAnswer = correctAnswer;
 	}
-	
+
 }
