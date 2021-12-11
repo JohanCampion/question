@@ -40,7 +40,8 @@ public class Tag {
 	 */
 	public void setName(String name) {
 		this.name = name;
-	}	/**
+	}	
+	/**
 	 * @return the category
 	 */
 	public Category getCategory() {
