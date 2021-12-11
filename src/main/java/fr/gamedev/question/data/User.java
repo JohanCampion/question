@@ -1,8 +1,8 @@
 package fr.gamedev.question.data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import java.util.List;
+
+import javax.persistence.*;
 
 /**
  * @author djer1
@@ -25,6 +25,9 @@ public class User {
 	 *Nom de famille (pour l'affichage)
 	 */
 	private String lastName;
+	
+	@ManyToMany
+	private List<Tag> interets;
 
 	/**
 	 * @return the id
@@ -67,5 +70,7 @@ public class User {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
+	
+	
 
 }
