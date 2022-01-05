@@ -22,8 +22,14 @@
 	<property name="fileExtensions" value="java, properties" />
 
 	<module name="SuppressionFilter">
+		<!-- TODO grp1 by DJE : Eclipse : {project_loc} est mieux car fait référence 
+			au "code source". {workspace_loc} sert pour la "config projet d'eclipse", 
+			le code source n'est pas toujours DANS le Workspace. -->
+		<!-- TODO grp1 by DJE : Eclipse : {project_loc} permet aussi d'éviter de 
+			mettre "en dur" le "dossier" du nom du projet, et est donc plus génériques 
+			(j'ai enlevé le "/question") -->
 		<property name="file"
-			value="${workspace_loc}/question/checkstyle/checkstyle-suppressions.xml"/>
+			value="${project_loc}/checkstyle/checkstyle-suppressions.xml" />
 		<property name="optional" value="false" />
 	</module>
 
@@ -62,17 +68,18 @@
 	<!-- <property name="headerFile" value="${checkstyle.header.file}"/> -->
 	<!-- <property name="fileExtensions" value="java"/> -->
 	<!-- </module>  -->
+
 	<module name="LineLength">
-			<property name="max" value="120" />
+		<property name="max" value="120" />
 	</module>
+
 	<module name="TreeWalker">
 		<!-- see : https://checkstyle.sourceforge.io/config_filters.html#SuppressWarningsFilter_Examples -->
 		<module name="SuppressWarningsHolder" />
 
 		<!-- Checks for Size Violations. -->
 		<!-- See http://checkstyle.sf.net/config_sizes.html -->
-		
-		
+
 		<property name="tabWidth" value="4" />
 
 		<!-- Checks for Javadoc comments. -->

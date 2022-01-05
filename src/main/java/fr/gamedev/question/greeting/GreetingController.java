@@ -12,17 +12,18 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class GreetingController {
 
-/**@param
-*Pré-format du greeting
- */
-private static final String TEMPLATE = "Hello, %s!";
-/**@param
- *Compteur du nombre de greeting
- */
-private final AtomicLong counter = new AtomicLong();
+    //TODO grp1 by DJE : JavaDoc : il n'y pas de "paramètre" sur le code en dessous, donc pas besoin de @param. En Javadoc le texte "sans @xxx" est la "description".
+    /**@param
+    *Pré-format du greeting
+     */
+    private static final String TEMPLATE = "Hello, %s!";
+    /**@param
+     *Compteur du nombre de greeting
+     */
+    private final AtomicLong counter = new AtomicLong();
 
-@GetMapping("/greeting")
-public Greeting greeting(@RequestParam(value = "name", defaultValue = "World") final String name) {
-    return new Greeting(counter.incrementAndGet(), String.format(TEMPLATE, name));
-}
+    @GetMapping("/greeting")
+    public Greeting greeting(@RequestParam(value = "name", defaultValue = "World") final String name) {
+        return new Greeting(counter.incrementAndGet(), String.format(TEMPLATE, name));
+    }
 }

@@ -2,7 +2,10 @@ package fr.gamedev.question.data;
 
 import java.util.List;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
 /**
  * @author djer1
@@ -11,66 +14,66 @@ import javax.persistence.*;
 @Entity
 public class User {
 
-	/**@param
-	 *Identifiant, autogénéré
-	 */
-	@GeneratedValue
-	@Id
-	private long id;
-	/**@param
-	 *Nom d'utilisateur (pour la connection par exemple)
-	 */
-	private String login;
-	/**@param
-	 *Nom de famille (pour l'affichage)
-	 */
-	private String lastName;
-	
-	@ManyToMany
-	private List<Tag> interets;
+    //TODO grp1 by DJE : JavaDoc : @param est inutile ici.
+    /**@param
+     *Identifiant, autogénéré
+     */
+    @GeneratedValue
+    @Id
+    private long id;
+    /**@param
+     *Nom d'utilisateur (pour la connection par exemple)
+     */
+    private String login;
+    /**@param
+     *Nom de famille (pour l'affichage)
+     */
+    private String lastName;
 
-	/**
-	 * @return the id
-	 */
-	public long getId() {
-		return id;
-	}
+    //TODO grp1 by DJE : PMD : Pmd indique que cet attributs est inutilisé (il manque les getter/setters)
+    @ManyToMany
+    private List<Tag> interets;
 
-	/**
-	 * @param id the id to set
-	 */
-	public void setId(long id) {
-		this.id = id;
-	}
+    /**
+     * @return the id
+     */
+    public long getId() {
+        return id;
+    }
 
-	/**
-	 * @return the login
-	 */
-	public String getLogin() {
-		return login;
-	}
+    /**
+     * @param id the id to set
+     */
+    public void setId(long id) {
+        this.id = id;
+    }
 
-	/**
-	 * @param login the login to set
-	 */
-	public void setLogin(String login) {
-		this.login = login;
-	}
+    /**
+     * @return the login
+     */
+    public String getLogin() {
+        return login;
+    }
 
-	/**
-	 * @return the lastName
-	 */
-	public String getLastName() {
-		return lastName;
-	}
+    /**
+     * @param login the login to set
+     */
+    public void setLogin(String login) {
+        this.login = login;
+    }
 
-	/**
-	 * @param lastName the lastName to set
-	 */
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-	
-	
+    /**
+     * @return the lastName
+     */
+    public String getLastName() {
+        return lastName;
+    }
+
+    /**
+     * @param lastName the lastName to set
+     */
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 
 }
